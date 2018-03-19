@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 offset-sm-8">
+      <h1>Regiones del pais </h1>  
+    </div>   
+    <div class="col-md-4 offset-md-4">
+      <button class="btn ">
+        <a href="/regions/new"> Crea una region</a>
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table">
+      <thead>
+        <th> Codigo:</th>
+        <th> Nombre:</th>
+        <th> Editar </th>
+        <th> Eliminar</th>
+      </thead>
+      <tbody>
+        <% @regions.each do |region| %>
+        <tr>
+          <td> <%= region.code_number %></td>
+          <td> <%= link_to "#{region.name}", region_path(region.id) %></td>
+          <td> <%= link_to "Editar region", edit_region_path(region.id)%></td>
+          <td> <%= link_to "Borrar region", region_path(region.id), method:"delete"%></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+

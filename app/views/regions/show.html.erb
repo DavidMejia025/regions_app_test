@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="show-header">
+    <h1>Esta en la zona <%= @region.name %></h1>
+  </div>
+  <div class="show-body">
+    <table class="table">
+      <thead>
+        <th>Codigo</th>
+        <th>Nombre</th>
+        <th>Estado</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </thead>
+      <tbody>
+        <%= render @states %>
+      </tbody>
+    </table>
+  </div>
+</div>
