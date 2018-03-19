@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="show-header">
+    <h1>Este es el municipio de <%= @state.name %></h1>
+    <h3> El codigo unico del municipio es:<span style="color:red"> <%= @state.code_number %></span></h3>
+    <h3> El municipio se encuentra: <span style="color:red"> <%= @state.current_state %></span></h3> 
+  </div>
+  <div class="show-body">
+    <h1>Este municipio esta asociado a las zonas</h1>
+    <table class="table">
+      <thead>
+        <th>Codigo</th>
+        <th>Nombre</th>
+      </thead>
+      <tbody>
+        <% @regions.each do |region| %>  
+            <tr>
+              <td>
+                <%= region.code_number %>
+              </td>
+              <td>
+                <%= region.name %>
+              </td>
+            </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -8,11 +8,23 @@
         <th>Codigo</th>
         <th>Nombre</th>
         <th>Estado</th>
-        <th>Edit</th>
-        <th>Delete</th>
+
       </thead>
       <tbody>
-        <%= render @states %>
+        <% @states.each do |state| %>
+            <tr>
+              <td>
+                <%= state.code_number %>
+              </td>
+              <td>
+                <%= state.name %>
+              </td>
+              <td>
+                <%= state.current_state %>
+              </td>
+            </tr>
+        <% end %>
+
       </tbody>
     </table>
   </div>

@@ -11,7 +11,7 @@
 #
 
 class State < ApplicationRecord
-  enum current_state: [:Inactivo,:activo,:active2]
+  enum current_state: [:zero,:Inactivo,:Activo]
 
   has_and_belongs_to_many :regions
 
